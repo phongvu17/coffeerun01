@@ -20,6 +20,8 @@ QUnit.test('Qunit test for DataStore', function(assert) {
     assert.equal(getValue, 'tea', 'We expect value to be "tea"');
 });
 
+// The problem to convert the code into QUnit test for Truck is the result of Truck is undefined. We can not compare the undefined value with the expected value.
+// We need define an additional return value from the printOrders function in Truck.js
 QUnit.test('Qunit test for Truck', function(assert) {
     var myTruck = new window.App.Truck('007', new window.App.DataStore());
 
